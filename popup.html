@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <style>
+            * { margin: 0; padding: 0; box-sizing: border-box; }
+            body { width: 500px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f5; }
+            .container { display: flex; flex-direction: column; height: 600px; }
+            .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 16px; }
+            .header h1 { font-size: 18px; margin-bottom: 8px; }
+            .tabs { display: flex; background: white; border-bottom: 1px solid #ddd; }
+            .tab-btn { flex: 1; padding: 12px; border: none; background: none; cursor: pointer; font-size: 14px; font-weight: 500; border-bottom: 3px solid transparent; }
+            .tab-btn.active { color: #667eea; border-bottom-color: #667eea; }
+            .content { flex: 1; overflow-y: auto; padding: 12px; }
+            .tab-content { display: none; }
+            .tab-content.active { display: flex; flex-direction: column; }
+            label { display: block; font-size: 12px; font-weight: 600; color: #666; margin-bottom: 4px; }
+            input, textarea { width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; font-family: monospace; font-size: 12px; margin-bottom: 12px; }
+            button { padding: 10px; border: none; border-radius: 4px; font-weight: 600; cursor: pointer; }
+            .btn-primary { background: #667eea; color: white; }
+            .log-item { background: white; border: 1px solid #ddd; border-radius: 4px; padding: 12px; margin-bottom: 8px; }
+          </style>
+  </head>
+  <body>
+      <div class="container">
+            <div class="header">
+                    <h1>📝 Prompt Logger</h1>
+                  <p style="font-size: 12px; opacity: 0.9;">Log and manage your prompts & seeds</p>p>
+            </div>div>
+          <div class="tabs">
+                <button class="tab-btn active" data-tab="log">Quick Log</button>button>
+                <button class="tab-btn" data-tab="history">History</button>button>
+          </div>div>
+          <div class="content">
+                <div id="log-tab" class="tab-content active">
+                        <label>Prompt Title (optional)</label>
+                        <input type="text" id="promptTitle" placeholder="e.g., Portrait Generation v2">
+                        <label>Prompt / Seed</label>
+                        <textarea id="promptText" placeholder="Paste your prompt or seed here..."></textarea>
+                        <label>Tags (comma separated)</label>
+                        <input type="text" id="promptTags" placeholder="e.g., portrait, painting, style">
+                        <button class="btn-primary" id="saveBtn">💾 Save Prompt</button>button>
+                </div>div>
+                <div id="history-tab" class="tab-content">
+                        <input type="text" id="searchBox" placeholder="Search logs...">
+                        <div id="logsList"></div>div>
+                </div>div>
+          </div>div>
+      </div>div>
+    <script src="popup.js"></script>
+  </body>
+</html></label></label></h1>
+  </body>
+      </style>
+  </head>
+</html>
